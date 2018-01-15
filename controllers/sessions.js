@@ -7,20 +7,19 @@ function newSession(req, res) {
 function createSession(req, res) {
   User
     .findOne({ email: req.body.email })
-    .exec()
     .then((user) => {
       if(!user || !user.validatePassword(req.body.password)) {
-        return res.status(401).render('sessions/new', { message: 'Unrecognized credentials 🙅🏻‍♀️🙅🏾‍♂️'});
+        req.flash('danger', 'Unknown email/password combination');
+        return res.redirect('/login');
       }
 
       req.session.userId = user.id;
       req.user = user;
-      req.flash('info', `Welcome, ${user.username}! 🚵🏻‍♀️`);
-      res.redirect('/trips');
+
+      req.flash('success', `Welcome back, ${user.username}!`);
+      res.redirect('/');
     })
-    .catch(() => {
-      res.satus(500).end();
-    });
+    .catch(next);
 }
 
 function deleteSession(req, res) {

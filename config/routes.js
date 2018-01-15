@@ -17,8 +17,26 @@ router.route('/login')
 router.route('/logout')
   .get(sessions.delete);
 
+router.route('/trips')
+  .get(trips.index)
+  .post(trips.create);
+
 router.route('/trips/new')
   .get(trips.new);
+
+router.route('trips/:id')
+  .get(trips.show)
+  .put(trips.update)
+  .delete(trips.delete);
+
+router.route('/trips/:id/edit')
+  .get(trips.edit);
+
+// router.route('/trips/:id/comments')
+//   .post(trips.createComment);
+//
+// router.route('/trips/:id/comments/:commentId')
+//   .delete(trips.deleteComment);
 
 //ask teaching staff about itre
 // router.all('*', (req, res) => res.notFound());
