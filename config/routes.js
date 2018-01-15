@@ -24,7 +24,7 @@ router.route('/trips')
 router.route('/trips/new')
   .get(secureRoute, trips.new);
 
-router.route('trips/:id')
+router.route('/trips/:id')
   .get(trips.show)
   .put(secureRoute, trips.update)
   .delete(secureRoute, trips.delete);

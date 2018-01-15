@@ -28,6 +28,7 @@ function tripNew(req, res) {
 }
 
 function tripShow(req, res, next) {
+  console.log('in tripShow');
   Trip
     .findById(req.params.id)
     //.populate('createdBy comments.createdBy')
