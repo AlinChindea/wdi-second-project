@@ -32,6 +32,9 @@ router.route('/trips/:id')
 router.route('/trips/:id/edit')
   .get(secureRoute, trips.edit);
 
+router.route('/search')
+  .get(trips.search);
+
 // router.route('/trips/:id/comments')
 //   .post(trips.createComment);
 //

@@ -17,6 +17,7 @@ const tripSchema = new mongoose.Schema({
   startPoint: { type: String, required: true },
   endPoint: { type: String, required: true },
   description: { type: String, required: true }
+
   // createdBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
   // comments: [ commentSchema ]
 });
@@ -24,7 +25,5 @@ const tripSchema = new mongoose.Schema({
 tripSchema.methods.belongsTo = function belongsTo(user) {
   return this.createdBy.id === user.id;
 };
-
-// console.log(tripSchema);
 
 module.exports = mongoose.model('Trip', tripSchema);
