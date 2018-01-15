@@ -2,7 +2,7 @@ const router   = require('express').Router();
 const trips    = require('../controllers/trips');
 const sessions = require('../controllers/sessions');
 const registrations = require('../controllers/registrations');
-// const secureRoute = require('../lib/secureRoute');
+const secureRoute = require('../lib/secureRoute');
 
 router.get('/', (req, res) => res.render('landing'));
 
@@ -19,18 +19,18 @@ router.route('/logout')
 
 router.route('/trips')
   .get(trips.index)
-  .post(trips.create);
+  .post(secureRoute, trips.create);
 
 router.route('/trips/new')
-  .get(trips.new);
+  .get(secureRoute, trips.new);
 
 router.route('trips/:id')
   .get(trips.show)
-  .put(trips.update)
-  .delete(trips.delete);
+  .put(secureRoute, trips.update)
+  .delete(secureRoute, trips.delete);
 
 router.route('/trips/:id/edit')
-  .get(trips.edit);
+  .get(secureRoute, trips.edit);
 
 // router.route('/trips/:id/comments')
 //   .post(trips.createComment);

@@ -4,7 +4,7 @@ function newSession(req, res) {
   res.render('sessions/new');
 }
 
-function createSession(req, res) {
+function createSession(req, res, next) {
   User
     .findOne({ email: req.body.email })
     .then((user) => {
