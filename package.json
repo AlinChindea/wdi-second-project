@@ -9,15 +9,17 @@
     "seed": "node db/seeds"
   },
   "engines": {
-    "node": "8.x.x"
+    "node": "9.2.0"
   },
-  "author": "Mike Hayden <mickyginger@gmail.com> (https://github.com/mickyginger)",
+  "author": "Alin Chindea <alin.chindea@gmail.com> (https://github.com/EagleEye182)",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^1.0.3",
     "bluebird": "^3.4.7",
     "ejs": "^2.5.6",
     "express": "^4.14.1",
     "express-ejs-layouts": "^2.2.0",
+    "express-flash": "^0.0.2",
     "mongoose": "^5.0.0-rc2",
     "morgan": "^1.8.1"
   },
