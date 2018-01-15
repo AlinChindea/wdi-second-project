@@ -35,11 +35,11 @@ router.route('/trips/:id/edit')
 router.route('/search')
   .get(trips.search);
 
-// router.route('/trips/:id/comments')
-//   .post(trips.createComment);
-//
-// router.route('/trips/:id/comments/:commentId')
-//   .delete(trips.deleteComment);
+router.route('/trips/:id/comments')
+  .post(trips.createComment);
+
+router.route('/trips/:id/comments/:commentId')
+  .delete(trips.deleteComment);
 
 //ask teaching staff about itre
 // router.all('*', (req, res) => res.notFound());

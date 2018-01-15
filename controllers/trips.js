@@ -7,6 +7,7 @@ function tripHome(req, res) {
 function tripIndex(req, res, next) {
   Trip
     .find()
+    .populate('createdBy comments.createdBy')
     .exec()
     .then((trips) => res.render('trips/index', { trips }))
     .catch(next);
@@ -31,7 +32,7 @@ function tripShow(req, res, next) {
   console.log('in tripShow');
   Trip
     .findById(req.params.id)
-    //.populate('createdBy comments.createdBy')
+    .populate('createdBy')
     .exec()
     .then((trip) => {
       if(!trip) return res.notFound();
@@ -41,7 +42,8 @@ function tripShow(req, res, next) {
 }
 
 function tripCreate(req, res, next) {
-  // req.body.createdBy = req.user;
+  console.log('in tripCreate');
+  req.body.createdBy = req.user;
   Trip
     .create(req.body)
     .then(() => res.redirect('/trips'))
@@ -96,7 +98,41 @@ function tripDelete(req, res, next) {
     .catch(next);
 }
 
-//to add create and delete comments
+function createComment(req, res, next) {
+  req.body.createdBy = req.user;
+
+  Trip
+    .findById(req.params.id)
+    .exec()
+    .then((trip) => {
+      if(!trip) return res.notFound();
+
+      trip.comments.push(req.body);
+      return trip.save();
+    })
+    .then((trip) => {
+      res.redirect(`/trips/${trip.id}`);
+    })
+    .catch(next);
+}
+
+function deleteComment(req, res, next) {
+  Trip
+    .findById(req.params.id)
+    .exec()
+    .then((trip) => {
+      if(!trip) return res.notFound();
+
+      const comment = trip.comments.id(req.params.commentId);
+      comment.remove;
+
+      return trip.save();
+    })
+    .then((trip) => {
+      res.redirect(`/trips/${trip.id}`);
+    })
+    .catch(next);
+}
 
 module.exports = {
   home: tripHome,
@@ -107,5 +143,7 @@ module.exports = {
   create: tripCreate,
   edit: tripEdit,
   update: tripUpdate,
-  delete: tripDelete
+  delete: tripDelete,
+  createComment: createComment,
+  deleteComment: deleteComment
 };

@@ -17,10 +17,9 @@ const tripSchema = new mongoose.Schema({
   startPoint: { type: String, required: true },
   endPoint: { type: String, required: true },
   description: { type: String, required: true },
-  featured: Boolean
-
-  // createdBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
-  // comments: [ commentSchema ]
+  featured: Boolean,
+  createdBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
+  comments: [ commentSchema ]
 });
 
 tripSchema.methods.belongsTo = function belongsTo(user) {

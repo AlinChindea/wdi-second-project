@@ -1,2 +1,48 @@
 <%- include ../partials/_header %>
 <h1>Display a bike route</h1>
+
+<div class="large-12 columns">
+  <h2><%= trip.name %></h2>
+  <h3>Created by: <%= trip.createdBy.username %></h3>
+  <h4>River: <%= trip.river %></h4>
+  <h4>Start point: <%= trip.startPoint %></h4>
+  <h4>End point: <%= trip.endPoint %></h4>
+  <h5>Brief: <%= trip.description %></h5>
+
+  <% if(locals.isLoggedIn && trip.belongsTo(user)) { %>
+  <a href="/trips/<%= trip.id %>/edit">Edit</a>
+  <form method="POST" action="/trips/<%= trip.id %>">
+    <input type="hidden" name="_method" value="DELETE">
+    <button>Delete</button>
+  </form>
+<% } %>
+
+<% trip.comments.forEach((comment) => { %>
+    <p><%= comment.content %></p>
+    <small><%= comment.createdBy.username %></small>
+
+    <% if(locals.isLoggedIn && comment.belongsTo(user)) { %>
+      <form method="POST" action="/trips/<%= trip.id %>/comments/<%= comment.id %>">
+        <input type="hidden" name="_method" value="DELETE">
+        <button>Delete</button>
+      </form>
+    <% } %>
+  <% }) %>
+
+  <% if(locals.isLoggedIn) { %>
+<section>
+  <h4>Leave a comment</h4>
+  <form method="POST" action="/trips/<%= trip.id %>/comments">
+    <textarea name="content" id="content" placeholder="Comment"></textarea>
+    <button class="button">Leave a comment</button>
+  </form>
+</section>
+<% } %>
+
+
+
+
+
+
+
+</div>
