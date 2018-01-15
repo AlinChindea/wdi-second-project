@@ -9,6 +9,11 @@
   <h4>End point: <%= trip.endPoint %></h4>
   <h5>Brief: <%= trip.description %></h5>
 
+  <h6>
+    Difficulty level(1 bike = low, 5 bikes = high):
+    <% while(trip.bikes--) { %> 🚲 <% } %>
+  </h6>
+
   <% if(locals.isLoggedIn && trip.belongsTo(user)) { %>
   <a href="/trips/<%= trip.id %>/edit">Edit</a>
   <form method="POST" action="/trips/<%= trip.id %>">
