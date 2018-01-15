@@ -24,7 +24,7 @@ User
     return Trip
       .create([{
         name: 'Drauradweg',
-        createdBy: users[0]._id,
+        createdBy: users[0],
         river: 'Drava',
         startPoint: '46.747435, 12.421015',
         endPoint: '46.640777, 14.948802',

@@ -1,2 +1,41 @@
 <%- include ../partials/_header %>
 <h1>Edit your contribution</h1>
+
+<%- include ../partials/_header %>
+
+<div class="container">
+  <div class="row">
+    <form class="col-md-6 offset-md-3" method="POST" action="/trips/<%= trip.id %>">
+      <h1>Add a new trip</h1>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" value=" <%= trip.name %>" name="name">
+      </div>
+      <div class="form-group">
+        <label for="river">River</label>
+        <input type="text" class="form-control" name="river" id="river" value=" <%= trip.river %>">
+      </div>
+      <div class="form-group">
+        <label for="startPoint">Start point</label>
+        <input type="text" class="form-control" name="startPoint" id="startPoint" value=" <%= trip.startPoint %>">
+      </div>
+      <div class="form-group">
+        <label for="endPoint">End point</label>
+        <input type="text" class="form-control" name="endPoint" id="endPoint" value=" <%= trip.endPoint %>">
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea class="form-control" name="description" id="description" rows="3"><%= trip.description %></textarea>
+      </div>
+      <div class="form-group">
+        <label for="bikes">Difficulty level</label>
+        <input type="number" class="form-control" name="bikes" id="bikes" min="1" max="5" value=" <%= trip.bikes %>">
+      </div>
+      <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+        <label class="form-check-label" for="terms-and-conditions"><small>I agree to the Terms &amp; Conditions</small></label>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Update trip</button>
+    </form>
+  </div>
+</div>

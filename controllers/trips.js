@@ -29,7 +29,7 @@ function tripNew(req, res) {
 }
 
 function tripShow(req, res, next) {
-  console.log('in tripShow');
+  // console.log('in tripShow');
   Trip
     .findById(req.params.id)
     .populate('createdBy')
@@ -42,7 +42,7 @@ function tripShow(req, res, next) {
 }
 
 function tripCreate(req, res, next) {
-  console.log('in tripCreate');
+  // console.log('in tripCreate');
   req.body.createdBy = req.user;
   Trip
     .create(req.body)
@@ -80,7 +80,7 @@ function tripUpdate(req, res, next) {
     .then((trip) => res.redirect(`/trips/${trip.params.id}`))
     .catch((err) => {
       if(err.name === 'ValidationError') {
-        return res.badRequest('/trips/new', err.toString());
+        return res.badRequest(`/trips/${req.params.id}/edit`, err.toString());
       }
       next(err);
     });
