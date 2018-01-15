@@ -16,7 +16,8 @@ const tripSchema = new mongoose.Schema({
   river: { type: String, required: true },
   startPoint: { type: String, required: true },
   endPoint: { type: String, required: true },
-  description: { type: String, required: true }
+  description: { type: String, required: true },
+  featured: Boolean
 
   // createdBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
   // comments: [ commentSchema ]
