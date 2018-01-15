@@ -1,8 +1,7 @@
 // import scss partials here
-body {
-  font-family: 'Lato', sans-serif;
-}
+@import 'helpers/variables';
 
-li {
-  list-style-type: none;
-}
+@import 'partials/base';
+@import 'partials/typography';
+
+@import 'components/landing';

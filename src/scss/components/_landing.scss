@@ -1,0 +1,21 @@
+.homepage {
+  background-image: url('https://images.unsplash.com/photo-1466023579643-2684822d3c2d?auto=format&fit=crop&w=1050&q=80');
+  background-position: center;
+  background-size: cover;
+  font-family: $font;
+  color: #fff;
+  min-height: 100%;
+  min-width: 100%
+}
+
+#content {
+  text-align: center;
+  padding-top: 17.3%;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4);
+}
+
+hr {
+  width: 400px;
+  border-top: 1px solid #f8f8f8;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
