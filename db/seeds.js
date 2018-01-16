@@ -29,8 +29,7 @@ User
         startPoint: '46.747435, 12.421015',
         endPoint: '46.640777, 14.948802',
         description: 'The Drau Cycle Path runs from the source of the Drau in Toblacher Feld, Italy, for 366 km along the eponymous river, through East Tyrol and Carinthia to Maribor in Slovenia.',
-        featured: true,
-        bikes: 3
+        featured: true
       }]);
   })
   .then((trips) => console.log(`${trips.length} trips created`))

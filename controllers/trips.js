@@ -4,6 +4,15 @@ function tripHome(req, res) {
   res.render('landing');
 }
 
+function tripFeatured(req, res, next) {
+  Trip
+    .find({featured: true})
+    // .populate('createdBy comments.createdBy')
+    .exec()
+    .then((trips) => res.render('trips/featured', { trips }))
+    .catch(next);
+}
+
 function tripIndex(req, res, next) {
   Trip
     .find()
@@ -77,7 +86,7 @@ function tripUpdate(req, res, next) {
 
       return trip.save();
     })
-    .then((trip) => res.redirect(`/trips/${trip.params.id}`))
+    .then((trip) => res.redirect(`/trips/${trip.id}`))
     .catch((err) => {
       if(err.name === 'ValidationError') {
         return res.badRequest(`/trips/${req.params.id}/edit`, err.toString());
@@ -136,6 +145,7 @@ function deleteComment(req, res, next) {
 
 module.exports = {
   home: tripHome,
+  featured: tripFeatured,
   index: tripIndex,
   search: tripSearch,
   new: tripNew,

@@ -18,8 +18,11 @@ router.route('/logout')
   .get(sessions.delete);
 
 router.route('/trips')
-  .get(trips.index)
+  .get(secureRoute, trips.index)
   .post(secureRoute, trips.create);
+
+router.route('/featured')
+  .get(trips.featured);
 
 router.route('/trips/new')
   .get(secureRoute, trips.new);

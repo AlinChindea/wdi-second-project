@@ -18,7 +18,7 @@ const tripSchema = new mongoose.Schema({
   endPoint: { type: String, required: true },
   description: { type: String, required: true },
   featured: Boolean,
-  bikes: { type: Number, required: true },
+  // bikes: { type: Number, required: true },
   createdBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
   comments: [ commentSchema ]
 });
