@@ -41,10 +41,10 @@
                 <% }) %>
 
                 <% if(locals.isLoggedIn) { %>
-                  <div class="form-group">
+                  <div class="form-group commentbox">
                   <form method="POST" action="/trips/<%= trip.id %>/comments">
                   <label for="exampleFormControlTextarea1"><h4>Leave a comment</h4></label>
-                  <textarea class="form-control" name="content" id="content" placeholder="Type your comment here" rows="3"></textarea>
+                  <textarea class="form-control commentbox" name="content" id="content" placeholder="Type your comment here" rows="3"></textarea>
                   <button class="btn btn-outline-primary btn-lg">Leave a comment</button>
                   </form>
                   </div>
