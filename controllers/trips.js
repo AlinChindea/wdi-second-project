@@ -25,6 +25,7 @@ function tripIndex(req, res, next) {
 function tripSearch(req, res, next) {
   Trip
     .findOne({ name: req.query.search})
+    .populate('createdBy')
     .exec()
     .then((trip) => {
       if(!trip) return res.notFound();
@@ -41,7 +42,7 @@ function tripShow(req, res, next) {
   // console.log('in tripShow');
   Trip
     .findById(req.params.id)
-    .populate('createdBy')
+    .populate('createdBy comments.createdBy')
     .exec()
     .then((trip) => {
       if(!trip) return res.notFound();
