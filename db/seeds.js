@@ -35,7 +35,7 @@ User
         name: 'Donauradweg',
         createdBy: users[0],
         river: 'Danube',
-        image: 'https://images.unsplash.com/photo-1444290679983-dd3aabf671ec?auto=format&fit=crop&w=1050&q=80',
+        image: 'https://images.unsplash.com/photo-1507520413369-94de50653411?auto=format&fit=crop&w=1050&q=80',
         startPoint: '48.566736, 13.431947',
         endPoint: '48.208174, 16.373819',
         description: 'to be added',
