@@ -1,31 +1,33 @@
 <%- include ../partials/_header %>
-<h1>Display a bike route</h1>
 
 <main class="container">
   <div class="row">
     <div class="col-md-6 offset-md-3">
       <div class="card">
         <img class="card-img-top" <img src="<%= trip.image %>" alt="<%= trip.name %>" class="img-thumbnail">
-      <div class="card-header">
-        <h2><%= trip.name %></h2>
-        <h5>Created by: <%= trip.createdBy.username %></h5>
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">River: <%= trip.river %></h5>
-        <p class="card-text">Start point: <%= trip.startPoint %></p>
-        <p class="card-text">End point: <%= trip.endPoint %></p>
-
-
-
-          <h5>Brief: <%= trip.description %></h5>
+        <div class="card-header">
+          <h2><%= trip.name %></h2>
+          <h5>Created by: <%= trip.createdBy.username %></h5>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">River: <%= trip.river %></h5>
+          <p class="card-text">Start point: <%= trip.startPoint %></p>
+          <p class="card-text">End point: <%= trip.endPoint %></p>
+          <p>Brief: <%= trip.description %></p>
 
           <% if(locals.isLoggedIn && trip.belongsTo(user)) { %>
-            <a href="/trips/<%= trip.id %>/edit">Edit</a>
-            <form method="POST" action="/trips/<%= trip.id %>">
-            <input type="hidden" name="_method" value="DELETE">
-            <button>Delete</button>
-            </form>
-            <% } %>
+            <a href="/trips/<%= trip.id %>/edit" class="btn btn-outline-primary btn-lg btn-block">Edit</a>
+        </div>
+        <div class="card-body">
+          <form method="POST" action="/trips/<%= trip.id %>">
+          <input type="hidden" name="_method" value="DELETE">
+          <button type="submit" class="btn btn-outline-danger btn-lg btn-block">Delete</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+        <% } %>
 
             <% trip.comments.forEach((comment) => { %>
               <p><%= comment.content %></p>
@@ -34,25 +36,18 @@
               <% if(locals.isLoggedIn && comment.belongsTo(user)) { %>
                 <form method="POST" action="/trips/<%= trip.id %>/comments/<%= comment.id %>">
                 <input type="hidden" name="_method" value="DELETE">
-                <button>Delete</button>
+                <button type="submit" class="btn btn-outline-danger btn-lg btn-block">Delete</button>
                 </form>
                 <% } %>
                 <% }) %>
 
                 <% if(locals.isLoggedIn) { %>
-                  <section>
-                  <h4>Leave a comment</h4>
+                  <div class="form-group">
                   <form method="POST" action="/trips/<%= trip.id %>/comments">
-                  <textarea name="content" id="content" placeholder="Comment"></textarea>
-                  <button class="button">Leave a comment</button>
+                  <label for="exampleFormControlTextarea1"><h4>Leave a comment</h4></label>
+                  <textarea class="form-control" name="content" id="content" placeholder="Type your comment here" rows="3"></textarea>
+                  <button class="btn btn-outline-primary btn-lg">Leave a comment</button>
                   </form>
-                  </section>
                   <% } %>
-
-
-
-
-
-
-
                 </div>
+</main>
