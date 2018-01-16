@@ -1,8 +1,9 @@
-<div class="row featurette">
+<main class="row featurette">
   <div class="col-md-7">
     <h2 class="featurette-heading">Biking along rivers. <span class="text-muted">It'll blow your mind.</span></h2>
     <p class="lead">From a stream to a creek and then to a full-fledged river. Through breathtaking landscapes. Crossing countries, regions and cultures. Meeting people from all walks of life. Strenghtening or building friendships. Biking along rivers has only two constants: the bike and the river. Everything else changes. Are your ready? Sign up/in!</p>
   </div>
+  <% trips.forEach((trip) => { %>
   <div class="col-md-5">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -15,9 +16,10 @@
           <img class="d-block w-100" src="https://images.unsplash.com/photo-1503401639559-b16332601594?auto=format&fit=crop&w=968&q=80" alt="First slide">
           <div class="container">
             <div class="carousel-caption d-none d-md-block">
-              <h1>Example headline.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+            <h4>River: <%= trip.river %></h4>
+            <h4>Start point: <%= trip.startPoint %></h4>
+            <h4>End point: <%= trip.endPoint %></h4>
+              <a class="btn btn-lg btn-primary" href="/trips/<%= trip.id %>" role="button"><h3><%= trip.name %></h3></a>
             </div>
           </div>
         </div>
@@ -38,4 +40,5 @@
       </a>
     </div>
   </div>
-</div>
+    <% }) %>
+</main>
