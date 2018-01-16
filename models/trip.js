@@ -14,6 +14,7 @@ commentSchema.methods.belongsTo = function commentBelongsTo(user) {
 const tripSchema = new mongoose.Schema({
   name: { type: String, required: true },
   river: { type: String, required: true },
+  image: { type: String, required: true },
   startPoint: { type: String, required: true },
   endPoint: { type: String, required: true },
   description: { type: String, required: true },

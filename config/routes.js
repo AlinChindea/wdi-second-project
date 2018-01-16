@@ -28,7 +28,7 @@ router.route('/trips/new')
   .get(secureRoute, trips.new);
 
 router.route('/trips/:id')
-  .get(trips.show)
+  .get(secureRoute, trips.show)
   .put(secureRoute, trips.update)
   .delete(secureRoute, trips.delete);
 

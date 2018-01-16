@@ -1,14 +1,19 @@
 <%- include ../partials/_header %>
-<h1>All bike trips</h1>
+<h1>All routes</h1>
 
-<% trips.forEach((trip) => { %>
-          <ul class="col-lg-6">
-          <li>
-          <a href="/trips/<%= trip.id %>"><h3><%= trip.name %></h3></a>
-          <h4>River: <%= trip.river %></h4>
-          <h4>Start point: <%= trip.startPoint %></h4>
-          <h4>End point: <%= trip.endPoint %></h4>
-          <h5>Brief: <%= trip.description %></h5>
-          </li>
-          </ul>
-          <% }) %>
+<main class="container">
+  <div class="row">
+  <% trips.forEach((trip) => { %>
+    <ul class="col-lg-4">
+    <li>
+    <a href="/trips/<%= trip.id %>"><h3><%= trip.name %></h3></a>
+    <img src="<%= trip.image %>" alt="<%= trip.name %>" class="img-thumbnail">
+    <h4>River: <%= trip.river %></h4>
+    <h4>Start point: <%= trip.startPoint %></h4>
+    <h4>End point: <%= trip.endPoint %></h4>
+    <h5>Brief: <%= trip.description %></h5>
+    </li>
+    </ul>
+    <% }) %>
+  </div>
+</main>
