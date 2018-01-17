@@ -7,7 +7,7 @@ $(() => {
   initMap();
 
   function initMap() {
-    const latLng = { lat: 51.515213, lng: -0.072331 };
+    const latLng = { lat: 48.566736, lng: 13.431947 };
     map = new google.maps.Map($map.get(0), {
       zoom: 14,
       center: latLng
