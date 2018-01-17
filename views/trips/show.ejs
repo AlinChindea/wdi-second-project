@@ -11,9 +11,14 @@
         </div>
         <div class="card-body">
           <h5 class="card-title">River: <%= trip.river %></h5>
-          <p class="card-text">Start point: <%= trip.startPoint %></p>
-          <p class="card-text">End point: <%= trip.endPoint %></p>
-          <p>Brief: <%= trip.description %></p>
+          <p class="card-text">Brief: <%= trip.description %></p>
+
+          <input type="hidden" value="<%= trip.startPoint.lat %>">
+          <input type="hidden" value="<%= trip.startPoint.lng %>">
+
+          <input type="hidden" value="<%= trip.endPoint.lat %>">
+          <input type="hidden" value="<%= trip.endPoint.lng %>">
+
 
           <% if(locals.isLoggedIn && trip.belongsTo(user)) { %>
             <a href="/trips/<%= trip.id %>/edit" class="btn btn-outline-primary btn-lg btn-block">Edit</a>
