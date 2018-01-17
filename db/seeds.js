@@ -23,7 +23,7 @@ User
     console.log(`${users.length} user created`);
     return Trip
       .create([{
-        name: 'Drauradweg',
+        name: 'Drava Cycle Path',
         createdBy: users[0],
         river: 'Drava',
         image: 'https://images.unsplash.com/photo-1498855926480-d98e83099315?auto=format&fit=crop&w=1050&q=80',

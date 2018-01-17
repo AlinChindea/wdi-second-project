@@ -11,29 +11,30 @@
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
       </ol>
       <h2>Featured routes</h2>
-      <div class="carousel-inner">
-          <% trips.forEach((trip, index) => { %>
+    <div class="carousel-inner">
+      <% trips.forEach((trip, index) => { %>
         <div class="carousel-item <% if(index === 0) { %> active<% } %>">
-          <img class="d-block w-100" src="<%= trip.image %>" alt="<%= trip.name %>">
-          <div class="container">
-            <div class="carousel-caption d-none d-md-block">
-            <h4>River: <%= trip.river %></h4>
-            <h4>Start point: <%= trip.startPoint %></h4>
-            <h4>End point: <%= trip.endPoint %></h4>
-              <a class="btn btn-sm btn-warning" href="/trips/<%= trip.id %>" role="button"><h3><%= trip.name %></h3></a>
-            </div>
-          </div>
+        <img class="d-block w-100" src="<%= trip.image %>" alt="<%= trip.name %>">
+        <div class="container">
+        <div class="carousel-caption d-none d-md-block">
+        <h4>River: <%= trip.river %></h4>
+        <h4>Start point: <%= trip.startPoint %></h4>
+        <h4>End point: <%= trip.endPoint %></h4>
+        <a class="btn btn-sm btn-warning" href="/trips/<%= trip.id %>" role="button"><h3><%= trip.name %></h3></a>
+        </div>
+        </div>
         </div>
 
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
-              <% }) %>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+          </a>
+          <% }) %>
+        </div>
+      </div>
     </div>
-  </div>
-</main>
+    </main>
