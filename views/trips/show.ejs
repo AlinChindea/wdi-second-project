@@ -13,11 +13,11 @@
           <h5 class="card-title">River: <%= trip.river %></h5>
           <p class="card-text">Brief: <%= trip.description %></p>
 
-          <input type="hidden" value="<%= trip.startPoint.lat %>">
-          <input type="hidden" value="<%= trip.startPoint.lng %>">
+          <input type="hidden" id="startPointLat" value="<%= trip.startPoint.lat %>">
+          <input type="hidden" id="startPointLng" value="<%= trip.startPoint.lng %>">
 
-          <input type="hidden" value="<%= trip.endPoint.lat %>">
-          <input type="hidden" value="<%= trip.endPoint.lng %>">
+          <input type="hidden" id="endPointLat" value="<%= trip.endPoint.lat %>">
+          <input type="hidden" id="endPointLng" value="<%= trip.endPoint.lng %>">
 
 
           <% if(locals.isLoggedIn && trip.belongsTo(user)) { %>
