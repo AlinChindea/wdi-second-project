@@ -4,10 +4,11 @@ $(() => {
   const $map = $('.map');
   let map    = null;
 
+
   initMap();
 
   function initMap() {
-    const markersArray = [];
+    // const markersArray = [];
     const bounds = new google.maps.LatLngBounds();
 
     const startPoint = {
