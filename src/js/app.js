@@ -31,9 +31,11 @@ $(() => {
     map.fitBounds(bounds);
 
     function createMarker(location) {
+      const image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
       const marker = new google.maps.Marker({
         position: location,
-        map: map
+        map: map,
+        icon: image
       });
 
       bounds.extend(location);

@@ -42,7 +42,7 @@ User
         startPointLng: '13.431947',
         endPointLat: '48.208174',
         endPointLng: '16.373819',
-        description: 'to be added',
+        description: 'The Danube cycle path is possibly the most famous cycle route in Europe. Most of its travelers cycle downstream, starting in or near Passau, in Germany, and ending their bike tour in Vienna.',
         featured: true
       },{
         name: 'Seine Valley',
