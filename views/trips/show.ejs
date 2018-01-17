@@ -2,7 +2,7 @@
 
 <main class="container">
   <div class="row">
-    <div class="col-md-6 offset-md-3">
+    <div class="col-lg-5">
       <div class="card">
         <img class="card-img-top" <img src="<%= trip.image %>" alt="<%= trip.name %>" class="img-thumbnail">
         <div class="card-header">
@@ -26,8 +26,14 @@
         </div>
       </div>
     </div>
-  </div>
+
         <% } %>
+        <div class="col-lg-7">
+          <div class="map">
+            
+          </div>
+        </div>
+        </div>
 
             <% trip.comments.forEach((comment) => { %>
               <p><%= comment.content %></p>

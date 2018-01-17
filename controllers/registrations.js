@@ -4,7 +4,7 @@ function newRoute(req, res) {
   return res.render('registrations/new');
 }
 
-function createRoute(req, res){
+function createRoute(req, res, next){
   User
     .create(req.body)
     .then(() => res.redirect('/login'))
