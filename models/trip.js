@@ -15,14 +15,10 @@ const tripSchema = new mongoose.Schema({
   name: { type: String, required: true },
   river: { type: String, required: true },
   image: { type: String, required: true },
-  startPoint: {
-    lat: {type: String, required: true },
-    lng: {type: String, required: true }
-  },
-  endPoint: {
-    lat: { type: String, required: true },
-    lng: { type: String, required: true }
-  },
+  startPointLat: {type: String, required: true },
+  startPointLng: {type: String, required: true },
+  endPointLat: { type: String, required: true },
+  endPointLng: { type: String, required: true },
   description: { type: String, required: true },
   featured: Boolean,
   createdBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },

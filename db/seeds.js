@@ -27,14 +27,10 @@ User
         createdBy: users[0],
         river: 'Drava',
         image: 'https://images.unsplash.com/photo-1498855926480-d98e83099315?auto=format&fit=crop&w=1050&q=80',
-        startPoint: {
-          lat: '46.747435',
-          lng: '12.421015'
-        },
-        endPoint: {
-          lat: '46.640777',
-          lng: '14.948802'
-        },
+        startPointLat: '46.747435',
+        startPointLng: '12.421015',
+        endPointLat: '46.640777',
+        endPointLng: '14.948802',
         description: 'The Drau Cycle Path runs from the source of the Drau in Toblacher Feld, Italy, for 366 km along the eponymous river, through East Tyrol and Carinthia to Maribor in Slovenia.',
         featured: true
       },{
@@ -42,14 +38,10 @@ User
         createdBy: users[0],
         river: 'Danube',
         image: 'https://images.unsplash.com/photo-1507520413369-94de50653411?auto=format&fit=crop&w=1050&q=80',
-        startPoint: {
-          lat: '48.566736',
-          lng: '13.431947'
-        },
-        endPoint: {
-          lat: '48.208174',
-          lng: '16.373819'
-        },
+        startPointLat: '48.566736',
+        startPointLng: '13.431947',
+        endPointLat: '48.208174',
+        endPointLng: '16.373819',
         description: 'to be added',
         featured: true
       },{
@@ -57,14 +49,10 @@ User
         createdBy: users[0],
         river: 'Seine',
         image: 'https://images.unsplash.com/photo-1496887581365-9afc1c3adf4d?auto=format&fit=crop&w=1050&q=80',
-        startPoint: {
-          lat: '48.852968',
-          lng: '2.349902'
-        },
-        endPoint: {
-          lat: '49.494370',
-          lng: '0.107929'
-        },
+        startPointLat: '48.852968',
+        startPointLng: '2.349902',
+        endPointLat: '49.494370',
+        endPointLng: '0.107929',
         description: 'to be added',
         featured: true
       }]);
