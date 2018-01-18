@@ -19,30 +19,32 @@
           <li class="nav-item">
           <a class="nav-link" href="/logout">Logout <i class="fas fa-sign-out-alt"></i></a>
           </li>
-          <% } else { %>
-            <li class="nav-item">
-            <a class="nav-link" href="/login"><i class="fas fa-user"></i> Sign in</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link register btn btn-outline-success" href="/register"><i class="fas fa-user-plus"></i> Sign up</a>
-            </li>
-            <% } %>
+        <% } else { %>
+          <li class="nav-item">
+          <a class="nav-link" href="/login"><i class="fas fa-user"></i> Sign in</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link register btn btn-outline-success" href="/register"><i class="fas fa-user-plus"></i> Sign up</a>
+          </li>
+          <% } %>
           </ul>
           <form class="form-inline my-2 my-lg-0" action="/search" method="GET">
             <input class="form-control mr-sm-2" type="search" placeholder="Search route" aria-label="Search" name="search">
             <button class="btn btn-warning my-2 my-sm-0" type="submit">Go!</button>
           </form>
-        </div>
-      </nav>
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <h1 class="display-4">Bike a'River</h1>
-          <p class="lead">Adventure on two wheels</p>
-        </div>
-      </div>
-    </header>
-    <% for(const type in messages) { %>
-      <div class="callout <%= type %>">
-        <h5><%= messages[type] %></h5>
-      </div>
-    <% } %>
+    </div>
+  </nav>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Bike a'River</h1>
+      <p class="lead">Adventure on two wheels</p>
+    </div>
+  </div>
+</header>
+<% for(const type in messages) { %>
+  <div class="alert alert-primary" role="alert">
+    <div class="callout <%= type %>">
+      <h5><%= messages[type] %></h5>
+    </div>
+  </div>
+<% } %>
