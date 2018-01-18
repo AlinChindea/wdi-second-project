@@ -43,7 +43,8 @@ $(() => {
           equalTo: "Please enter the same password as above"
         },
         email: "Please enter a valid email address",
-      }
+      },
+      errorElement: "em",
   });
   initMap();
 
