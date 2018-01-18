@@ -7,15 +7,14 @@ function tripHome(req, res) {
 function tripFeatured(req, res, next) {
   Trip
     .find({featured: true})
-    // .populate('createdBy comments.createdBy')
     .exec()
     .then((trips) => res.render('trips/featured', { trips }))
     .catch(next);
 }
 
 function tripIndex(req, res, next) {
-  if(req.query.name) {
-    req.query = { name: new RegExp(req.query.name, 'i')};
+  if(req.query.river) {
+    req.query = { name: new RegExp(req.query.river, 'i')};
   }
   Trip
     .find(req.query)
