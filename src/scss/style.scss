@@ -1,5 +1,6 @@
 // import scss partials here
 @import 'helpers/variables';
+@import 'helpers/classes';
 
 @import 'partials/base';
 @import 'partials/typography';
@@ -9,14 +10,3 @@
 @import 'components/navbar';
 @import 'components/jumbo';
 @import 'components/footer';
-
-.commentbox {
-  margin: 15px 0;
-  width: 100%;
-  text-align: center;
-}
-
-.map {
-  width: 100%;
-  height: 100vh;
-}
