@@ -3,7 +3,7 @@
 $(() => {
   const $map = $('.map');
   let map    = null;
-  
+
   initMap();
 
   function initMap() {
@@ -50,17 +50,18 @@ $(() => {
       }, function(response) {
         const distance = response.rows[0].elements[0].distance.text;
         const duration = response.rows[0].elements[0].duration.text;
+        $('.distance').text('Distance: ' + distance);
+        $('.duration').text('Duration: ' + duration);
+
 
         console.log(distance, duration);
       });
     }
 
     function createMarker(location) {
-      const image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
       new google.maps.Marker({
         position: location,
-        map: map,
-        icon: image
+        map: map
       });
 
       bounds.extend(location);

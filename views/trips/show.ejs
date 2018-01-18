@@ -12,6 +12,8 @@
         <div class="card-body">
           <h5 class="card-title">River: <%= trip.river %></h5>
           <p class="card-text">Brief: <%= trip.description %></p>
+          <p class="card-text distance"></p>
+          <p class="card-text duration"></p>
 
           <input type="hidden" id="startPointLat" value="<%= trip.startPointLat %>">
           <input type="hidden" id="startPointLng" value="<%= trip.startPointLng %>">
