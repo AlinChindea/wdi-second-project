@@ -42,9 +42,12 @@
   </div>
 </header>
 <% for(const type in messages) { %>
-  <div class="alert alert-primary" role="alert">
+  <div class="alert alert-primary alert-dismissible fade show" role="alert">
     <div class="callout <%= type %>">
       <h5><%= messages[type] %></h5>
     </div>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
   </div>
 <% } %>

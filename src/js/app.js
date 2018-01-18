@@ -50,17 +50,10 @@ $(() => {
       }, function(response) {
         const distance = response.rows[0].elements[0].distance.text;
         const duration = response.rows[0].elements[0].duration.text;
-        // const contentInfo = 'Distance: ' + distance + 'Duration: ' + duration;
+
         $('.distance').text('Distance: ' + distance);
         $('.duration').text('Duration: ' + duration);
-        // const infoWindow = new google.maps.InfoWindow({
-        //   content: contentInfo,
-        //   maxWidth: 200
       });
-      //   $(map).on('hover', function() {
-      //     infoWindow.open(map, map);
-      //   });
-      // });
     }
 
     function createMarker(location) {
