@@ -88,6 +88,39 @@ User
         endPointLng: '12.346343',
         description: 'The route is 124km long and suitable for any type of bicycle. It starts from Bondeno, a town 15km northwest of Ferrara and runs to Gorino in the region of Veneto. It is well paved all the way except the last part at the end, has clear easy to follow signs and is suitable for cycling family holidays. The best way to enjoy the route is, naturally, going at a slow pace and exploring the villages and towns on the way.',
         featured: false
+      },{
+        name: 'Thames Valley',
+        createdBy: users[0],
+        river: 'Thames',
+        image: 'https://images.unsplash.com/photo-1508711046474-2f4c2d3d30ca?auto=format&fit=crop&w=1050&q=80',
+        startPointLat: '51.467461',
+        startPointLng: '-0.211363',
+        endPointLat: '51.746917',
+        endPointLng: '-1.267483',
+        description: 'This popular route leads an escape from the city of London, following the Thames out into the countryside, passing through parks at Richmond and Hampton Court, the latter along the riverside path. It is a 99 miles ride including 40 miles traffic-free.',
+        featured: false
+      },{
+        name: 'Mosel Valley',
+        createdBy: users[0],
+        river: 'Moselle',
+        image: 'https://images.unsplash.com/photo-1502563800136-eaceb58f2572?auto=format&fit=crop&w=1500&q=80',
+        startPointLat: '49.818670',
+        startPointLng: '6.752601',
+        endPointLat: '50.363954',
+        endPointLng: '7.604213',
+        description: 'The Moselle is region of natural beauty where the river flows through a steep-sided valley and you can cycle along the river on both sides. The path is mostly flat and is going through a wine-growing country. This ride takes down to Koblenz where the Moselle valley ends and the river joins the Rhine.',
+        featured: false
+      },{
+        name: 'La Loire à Vélo',
+        createdBy: users[0],
+        river: 'Loire',
+        image: 'https://images.unsplash.com/photo-1470470558828-e00ad9dbbc13?auto=format&fit=crop&w=1050&q=80',
+        startPointLat: '44.844444',
+        startPointLng: '4.220000',
+        endPointLat: '47.268904',
+        endPointLng: '-2.149630',
+        description: 'La Loire à Vélo is a cycling trail stretching almost 500 miles from the western coast to heartland France. It offers tourists one of the most diverse and interesting cycling routes in the whole of Europe.Spoiled between spectacular mountain scenery, endless vineyards and stunning historical architecture, it’s a great place to unwind. It starts in Goudet, nearby Mont Gerbier des Joncs, the source of the river in the Massif Central and ends at Bren-le-Pin near the Atlantic.',
+        featured: false
       }]);
   })
   .then((trips) => console.log(`${trips.length} trips created`))
