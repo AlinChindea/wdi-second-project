@@ -78,15 +78,15 @@ User
         description: 'As it follows the Mississippi River corridor from its headwaters in northern Minnesota to the southernmost point in Louisiana, the Mississippi River Trail (MRT) provides a 3,000-plus-mile ride through America’s heartland. For those cyclists looking for an enjoyable multi-day tour—by crossing the river on one of the many biker friendly bridges, or via a ferry ride—the options for extended multi-day loop tours are unlimited.',
         featured: false
       },{
-        name: 'Destra Po',
+        name: 'Rhine Cycle Route',
         createdBy: users[0],
-        river: 'Po',
+        river: 'Rhine',
         image: 'https://images.unsplash.com/photo-1430391553909-82e0eed4d127?auto=format&fit=crop&w=1050&q=80',
-        startPointLat: '44.886223',
-        startPointLng: '11.423004',
-        endPointLat: '44.826314',
-        endPointLng: '12.346343',
-        description: 'The route is 124km long and suitable for any type of bicycle. It starts from Bondeno, a town 15km northwest of Ferrara and runs to Gorino in the region of Veneto. It is well paved all the way except the last part at the end, has clear easy to follow signs and is suitable for cycling family holidays. The best way to enjoy the route is, naturally, going at a slow pace and exploring the villages and towns on the way.',
+        startPointLat: '46.633074',
+        startPointLng: '8.674568',
+        endPointLat: '51.976709',
+        endPointLng: '4.130769',
+        description: 'The River Rhine has its source at an altitude of 2345 metres, in a small shimmering lake surrounded by high peaks. From Lake Toma, the small torrent cascades down the hills, joins other streams and becomes increasingly larger as it continues its journey over 1233 kilometres through Switzerland, Germany, France, to its mouth in the Netherlands. Explore the beauty of this river landscape and the picturesque towns and villages lining its banks, a number of which are listed as UNESCO World Heritage Sites.',
         featured: false
       },{
         name: 'Thames Valley',
