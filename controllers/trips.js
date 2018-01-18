@@ -14,8 +14,11 @@ function tripFeatured(req, res, next) {
 }
 
 function tripIndex(req, res, next) {
+  if(req.query.name) {
+    req.query = { name: new RegExp(req.query.name, 'i')};
+  }
   Trip
-    .find()
+    .find(req.query)
     .populate('createdBy comments.createdBy')
     .exec()
     .then((trips) => res.render('trips/index', { trips }))
