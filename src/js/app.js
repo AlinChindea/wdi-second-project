@@ -3,13 +3,14 @@
 $(() => {
   const $map = $('.map');
   let map    = null;
-
-
+  
   initMap();
 
   function initMap() {
-    // const markersArray = [];
-    const bounds = new google.maps.LatLngBounds();
+    const bounds             = new google.maps.LatLngBounds();
+    const directionsService  = new google.maps.DirectionsService;
+    const directionsDisplay  = new google.maps.DirectionsRenderer;
+    const distanceCalculator = new google.maps.DistanceMatrixService;
 
     const startPoint = {
       lat: parseFloat($('#startPointLat').val()),
@@ -29,10 +30,34 @@ $(() => {
     createMarker(startPoint);
     createMarker(endPoint);
     map.fitBounds(bounds);
+    directionsDisplay.setMap(map);
+    calculateAndDisplayRoute();
+
+    function calculateAndDisplayRoute() {
+      directionsService.route({
+        origin: startPoint,
+        destination: endPoint,
+        travelMode: 'BICYCLING'
+      }, function(response, status) {
+        status === 'OK' ? directionsDisplay.setDirections(response) : window.alert('Directions request failed due to ' + status);
+      });
+
+      distanceCalculator.getDistanceMatrix({
+        origins: [startPoint],
+        destinations: [endPoint],
+        travelMode: 'BICYCLING',
+        unitSystem: google.maps.UnitSystem.METRIC
+      }, function(response) {
+        const distance = response.rows[0].elements[0].distance.text;
+        const duration = response.rows[0].elements[0].duration.text;
+
+        console.log(distance, duration);
+      });
+    }
 
     function createMarker(location) {
       const image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
-      const marker = new google.maps.Marker({
+      new google.maps.Marker({
         position: location,
         map: map,
         icon: image

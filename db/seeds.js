@@ -53,7 +53,7 @@ User
         startPointLng: '2.349902',
         endPointLat: '49.494370',
         endPointLng: '0.107929',
-        description: 'to be added',
+        description: 'This route showcases the Seine River valley at its finest, meaning you can effectively cycle from Paris to the English Channel at Le Havre. The Seine Valley would also make a great fixed based destination as there is plenty of variety for cyclists, from easy valley-bottom roads to short but often stiff climbs up the valley sides, often flanked by magnificent chalk cliffs.',
         featured: true
       },{
         name: 'Rhone Valley',

@@ -8,6 +8,13 @@
     <% include ./partials/_scripts.ejs %>
   </head>
   <body>
-    <%- body %>
+    <% for(const type in messages) { %>
+      <div class="callout <%= type %>">
+        <h5><%= messages[type] %></h5>
+      </div>
+    <% } %>
+
+      <%- body %>
+
   </body>
 </html>
