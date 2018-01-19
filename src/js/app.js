@@ -46,6 +46,38 @@ $(() => {
     },
     errorElement: 'em'
   });
+  $('#newtrip').validate({
+    rules: {
+      name: 'required',
+      river: 'required',
+      image: 'required',
+      startPointLat: 'required',
+      startPointLng: 'required',
+      endPointLat: 'required',
+      endPointLng: 'required',
+      decription: {
+        required: true,
+        minlength: 150
+      },
+      agree: 'required'
+    },
+    messages: {
+      name: 'Please enter a name for this route',
+      river: 'Please enter the name of the river',
+      image: 'Please enter a correct url',
+      startPointLat: 'Please enter the latitude coordinates of the start point',
+      startPointLng: 'Please enter the longitude coordinates of the start point',
+      endPointLat: 'Please enter the latitude coordinates of the end point',
+      endPointLng: 'Please enter the longitude coordinates of the end point',
+      description: {
+        required: 'Please enter a brief description for this route',
+        minlength: 'Your description must be at least 150 characters long'
+      },
+      agree: 'You must agree to our Terms and Conditions'
+    },
+    errorElement: 'em'
+  });
+
   initMap();
 
   function initMap() {
