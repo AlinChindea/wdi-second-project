@@ -21,3 +21,18 @@ hr {
   border-top: 1px solid $primary-color;
   border-bottom: 1px solid rgba(0,0,0,0.2);
 }
+
+@media (min-width: 10em) {
+
+  .homepage {
+    font-size: 20px;
+  }
+
+  #landcontent {
+    font-size: 1em;
+  }
+
+  hr {
+    width: 150px;
+  }
+}
