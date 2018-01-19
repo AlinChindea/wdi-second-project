@@ -20,6 +20,8 @@ I've organized my work in Trello, including wireframes (via balsamiq.com). I've 
 
 ![alin - project 2 - wireframe](https://user-images.githubusercontent.com/29477363/35147808-d795faae-fd07-11e7-889a-8564f5ac15c4.png)
 
+##Installation and setup
+You can run the project locally by downloading or clonning the [Github repo](https://github.com/EagleEye182/wdi-second-project) or you can view it [online on Heroku](https://bike-a-river.herokuapp.com/).
 
 ## Technology
 This is a a **full-stack RESTful application** that includes **authentication**. In a nutshell, it is an **Express application** that has a **Mongo** database using the **Mongoose ORM**.
@@ -65,16 +67,16 @@ B. Frontend
 * jQuery validator
 * SCSS/SASS
 
-##Achievements
+## Achievements
 The app covers all the technical requirements for this project. On top, it uses the Google Maps API that gives it a degree of dynamism. Further, it contains client-side form validation using jQuery and flash messages to show success/error information. The search function can look up rivers and is not case sensitive. Initial tests indicate that the app is fully responsive however more testing should be conducted.
 ![screen shot 2018-01-19 at 11 32 50 am](https://user-images.githubusercontent.com/29477363/35149051-97aa627c-fd0c-11e7-91e6-9bca29cb172b.png)
 
 
-##Next steps
+## Next steps
 
 In the short run, I aim to make the app fully responsive. The SCSS code must be DRYer and the UI experience can be improved. Content-wise, the user will get a profile page to check their contributions and there should be a functionality to allow them to add routes they like to their profile (create a portfolio or a wish list). A rating system can be implemented and, using Google Maps API documentation, to add elevation on the map for more information. Not least, the search function can be made more flexible.
 
-##Acknowledgments
+## Acknowledgments
 This project would not have come to fruition without the brilliant support from General Assembly's instructional team. Kudos to Ben, Emily, Guy, Rane and Rupesh.
 
 Grateful to my biking mates for their companionship and initial feedback on the project.
