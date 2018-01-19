@@ -6,8 +6,8 @@ $(() => {
   $('#loginform').validate();
   $('#signupform').validate({
     rules: {
-      firstName: "required",
-      lastName: "required",
+      firstName: 'required',
+      lastName: 'required',
       username: {
         required: true,
         minlength: 2
@@ -23,28 +23,28 @@ $(() => {
       passwordConfirmation: {
         required: true,
         minlength: 2,
-        equalTo: "#password"
-      },
+        equalTo: '#password'
+      }
     },
     messages: {
-        firstName: "Please enter your firstname",
-        lastName: "Please enter your lastname",
-        username: {
-          required: "Please enter a username",
-          minlength: "Your username must consist of at least two characters"
-        },
-        password: {
-          required: "Please provide a password",
-          minlength: "Your password must be at least two characters long"
-        },
-        passwordConfirmation: {
-          required: "Please provide a password",
-          minlength: "Your password must be at least two characters long",
-          equalTo: "Please enter the same password as above"
-        },
-        email: "Please enter a valid email address",
+      firstName: 'Please enter your firstname',
+      lastName: 'Please enter your lastname',
+      username: {
+        required: 'Please enter a username',
+        minlength: 'Your username must consist of at least two characters'
       },
-      errorElement: "em",
+      password: {
+        required: 'Please provide a password',
+        minlength: 'Your password must be at least two characters long'
+      },
+      passwordConfirmation: {
+        required: 'Please provide a password',
+        minlength: 'Your password must be at least two characters long',
+        equalTo: 'Please enter the same password as above'
+      },
+      email: 'Please enter a valid email address'
+    },
+    errorElement: 'em'
   });
   initMap();
 
