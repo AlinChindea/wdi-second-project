@@ -12,14 +12,25 @@
       <div class="form-group">
         <label for="river">River</label>
         <input type="text" class="form-control" name="river" id="river" value=" <%= trip.river %>">
+      </div><div class="form-group">
+        <label for="image">Photo</label>
+        <input type="url" class="form-control" name="image" id="image" value="<%= trip.image %>">
       </div>
       <div class="form-group">
-        <label for="startPoint">Start point</label>
-        <input type="text" class="form-control" name="startPoint" id="startPoint" value=" <%= trip.startPoint %>">
+        <label for="startPointlat">Start point latitude</label>
+        <input type="text" class="form-control" name="startPointLat" id="startPointLat" value="<%= trip.startPointLat %>">
       </div>
       <div class="form-group">
-        <label for="endPoint">End point</label>
-        <input type="text" class="form-control" name="endPoint" id="endPoint" value=" <%= trip.endPoint %>">
+        <label for="startPointlng">Start point longitude</label>
+        <input type="text" class="form-control" name="startPointLng" id="startPointLng" value="<%= trip.startPointLng %>">
+      </div>
+      <div class="form-group">
+        <label for="endPointlat">End point latitude</label>
+        <input type="text" class="form-control" name="endPointLat" id="endPointLat" value="<%= trip.endPointLat %>">
+      </div>
+      <div class="form-group">
+        <label for="endPointlng">End point longitude</label>
+        <input type="text" class="form-control" name="endPointLng" id="endPointLng" value="<%= trip.endPointLng %>">
       </div>
       <div class="form-group">
         <label for="description">Description</label>
