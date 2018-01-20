@@ -14,7 +14,7 @@ function tripFeatured(req, res, next) {
 
 function tripIndex(req, res, next) {
   if(req.query.river) {
-    req.query = { name: new RegExp(req.query.river, 'i')};
+    req.query = { river: new RegExp(req.query.river, 'i')};
   }
   Trip
     .find(req.query)
@@ -26,7 +26,7 @@ function tripIndex(req, res, next) {
 
 function tripSearch(req, res, next) {
   Trip
-    .findOne({ name: req.query.search})
+    .findOne({ river: req.query.search})
     .populate('createdBy')
     .exec()
     .then((trip) => {
