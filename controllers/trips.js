@@ -134,7 +134,7 @@ function deleteComment(req, res, next) {
       if(!trip) return res.notFound();
 
       const comment = trip.comments.id(req.params.commentId);
-      comment.remove;
+      comment.remove();
 
       return trip.save();
     })
