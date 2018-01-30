@@ -20,7 +20,7 @@ I've organized my work in Trello, including wireframes (via balsamiq.com). I've 
 
 ![alin - project 2 - wireframe](https://user-images.githubusercontent.com/29477363/35147808-d795faae-fd07-11e7-889a-8564f5ac15c4.png)
 
-##Installation and setup
+## Installation and setup
 You can run the project locally by downloading or clonning the [Github repo](https://github.com/EagleEye182/wdi-second-project) or you can view it [online on Heroku](https://bike-a-river.herokuapp.com/).
 
 ## Technology
@@ -74,7 +74,7 @@ The app covers all the technical requirements for this project. On top, it uses 
 
 ## Next steps
 
-In the short run, I aim to make the app fully responsive. The SCSS code must be DRYer and the UI experience can be improved. Content-wise, the user will get a profile page to check their contributions and there should be a functionality to allow them to add routes they like to their profile (create a portfolio or a wish list). A rating system can be implemented and, using Google Maps API documentation, to add elevation on the map for more information. Not least, the search function can be made more flexible.
+In the short run, I aim to make the app fully responsive. The SCSS code must be DRYer and the UI experience can be improved. Content-wise, the user will get a profile page to check their contributions and there should be a functionality to allow them to add routes they like to their profile (create a portfolio or a wish list). A rating system can be implemented. Further, using Google Maps API documentation, I should include autocomplete on the form for adding a new route and elevation on the map for additional information. Not least, the search function can be made more flexible.
 
 ## Acknowledgments
 This project would not have come to fruition without the brilliant support from General Assembly's instructional team. Kudos to Ben, Emily, Guy, Rane and Rupesh.
