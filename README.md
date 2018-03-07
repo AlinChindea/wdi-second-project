@@ -12,7 +12,7 @@
 
 'Bike a'River' is the title of my second web development course project, combining front and backend dependencies. The idea was born out of the annual trips I take with two of my friends: we bike along a river from its source to either the end of it or until it becomes a full-fledged river. Every year we struggle to find integrated information about the route chosen. This app aims to fill this gap as well as to document anyone's adventures through incredible landscapes and offer new options for biking lovers.
 
-##Creative process
+## Creative process
 ![screen shot 2018-01-15 at 2 50 52 pm](https://user-images.githubusercontent.com/29477363/35147416-69e1a982-fd06-11e7-8a1c-14b6794d8e1a.png)
 
 I've organized my work in Trello, including wireframes (via balsamiq.com). I've approached the backend first and moved on to frontend.

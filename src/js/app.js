@@ -144,21 +144,5 @@ $(() => {
     bikeLayer.setMap(map);
   }
 
-  // function initAutocomplete() {
-  //   autocomplete1 = new google.maps.places.Autocomplete($('#autocomplete1').get(0));
-  //   autocomplete1.addListener('place_changed', fillInAddress);
-  //   autocomplete2 = new google.maps.places.Autocomplete($('#autocomplete2').get(0));
-  //   autocomplete2.addListener('place_changed', fillInAddress);
-  // }
-  //
-  // function fillInAddress() {
-  //   const place1 = autocomplete1.getPlace();
-  //   const place2 = autocomplete2.getPlace();
-  //   $('#startPointLat').val(place1.geometry.location.lat());
-  //   $('#startPointLng').val(place1.geometry.location.lng());
-  //   $('#endPointLat').val(place2.geometry.location.lat());
-  //   $('#endPointLng').val(place2.geometry.location.lng());
-  // }
-  //
-  // if ($('#newtrip').length !== 0) initAutocomplete();
+  
 });
