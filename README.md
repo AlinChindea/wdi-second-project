@@ -2,7 +2,7 @@
 ![ga_cog_large_red_rgb](https://cloud.githubusercontent.com/assets/40461/8183776/469f976e-1432-11e5-8199-6ac91363302b.png)
 # Bike a'River
 
-##Intro
+## Intro
 
 
 ![screen shot 2018-01-19 at 10 43 11 am](https://user-images.githubusercontent.com/29477363/35147188-9d0f04ae-fd05-11e7-9576-894709819531.png)
